@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>They Grow Up So Fast</title>
+
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/web-2.0.css">
+
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+
+	<script src="../modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide" id="title-slide">
+	<h2>They Grow Up So Fast</h2>
+	<img src="https://media.giphy.com/media/pjsAgS0ZpaFvW/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="title-slide-1">
+	<h2>I know these slides are ugly as hell</h2>
+	<h3>If you can tell me a half decent, free, offline slide tool I'll give you a sticker</h3>
+	<img src="https://media.giphy.com/media/I7i8UBiPUdUmk/giphy.gif" width="650" height="500" />
+	<h3>Also, I totally half assed the giphys.</h3>
+</section>
+
+<section class="slide" id="title-slide-2">
+	<h2>Every codebase starts out as a smiling baby</h2>
+		<img src="https://media.giphy.com/media/qNbw4ilR1RLKo/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="title-slide-3">
+	<h2>Then it becomes an unruly child</h2>
+		<img src="https://media.giphy.com/media/13AXYJh2jDt2IE/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="title-slide-4">
+	<h2>Then puberty hits and you start regretting all of your life choices</h2>
+		<img src="https://media.giphy.com/media/Ks3AzM3rS9adW/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="title-slide-5">
+	<h1>How does this happen?</h1>
+</section>
+
+<section class="slide" id="slide-2">
+	<h2>Let's google 'node tutorial'</h2>
+	<img src="https://i.gyazo.com/b2cc404d2d4c6be2931558bfc9267ee6.png" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-3">
+	<h2>Ok I think I got this</h2>
+	<pre>
+/* POST to Add User Service */
+router.post('/adduser', function(req, res) {
+
+    // Set our internal DB variable
+    var db = req.db;
+
+    // Get our form values. These rely on the "name" attributes
+    var userName = req.body.username;
+    var userEmail = req.body.useremail;
+
+    // Set our collection
+    var collection = db.get('usercollection');
+
+    // Submit to the DB
+    collection.insert({
+        "username" : userName,
+        "email" : userEmail
+    }, function (err, doc) {
+        if (err) {
+            // If it failed, return error
+            res.send("There was a problem adding the information to the database.");
+        }
+        else {
+            // And forward to success page
+            res.redirect("userlist");
+        }
+    });
+	});
+		</pre>
+</section>
+<section class="slide" id="slide-4">
+	<h2>Example: Callback hell</h2>
+	<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+	<h3>This is the example giphy, get used to it</h3>
+</section>
+
+<section class="slide" id="slide-5">
+	<h2>Example: Es6 + Promises</h2>
+		<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+<section class="slide" id="slide-6">
+	<h2>Cool I'm using promises now. Done.</h2>
+		<img src="https://media.giphy.com/media/DbrKTwOyY768M/giphy.gif" width="650" height="500" />
+</section>
+<section class="slide" id="slide-7">
+	<h2>Example: Promise Hell</h2>
+		<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+<section class="slide" id="slide-8">
+	<h3>Ok well now what. Should I use</h3>
+	<ol>
+		<li>
+			<h4>async await?</h4>
+		</li>
+		<li>
+			<h4>callbacks again?</h4>
+		</li>
+		<li>
+			<h4>generators + co?</h4>
+		</li>
+		<li>
+			<h4>whatever Kevin is yelling about from the audience?</h4>
+		</li>
+	</ol>
+</section>
+<section class="slide" id="slide-9">
+	<h2>It actually doesn't matter at all. Move stuff into different files.</h2>
+	<ol>
+		<li>
+			<h4>One function per file, unless it's ridiculously specific</h4>
+		</li>
+		<li>
+			<h4>Unit test the individual files</h4>
+		</li>
+		<li>
+			<h4>Component test the folder</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-10">
+	<h2>Example + Pro tip: Es6 exports</h2>
+			<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-11">
+	<h2>Ok I put everything in different files.</h2>
+		<img src="https://i.gyazo.com/2fce0a383e3f1ed5fac0d6a1abd3c201.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-12">
+	<h2>modules</h2>
+	<ol>
+		<li>
+			<h4>Don't half ass it with github repos</h4>
+		</li>
+		<li>
+			<h4>npm has private modules right now</h4>
+		</li>
+		<li>
+			<h4>It's really easy to use</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-13">
+	<h2>Protip + Example: Let's use yeoman to create a private npm module right now</h2>
+			<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-14">
+	<h2>Now wonderful things start happening</h2>
+	<ol>
+		<li>
+			<h4>You're pushing your components into small modules</h4>
+		</li>
+		<li>
+			<h4>Some of these components won't have any ties to your domain</h4>
+		</li>
+		<li>
+			<h4>You can open source these components</h4>
+		</li>
+		<li>
+			<h4>Green dots on Github means you're a good programmer</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-15">
+	<h2>Things We're facing now</h2>
+	<img src="https://media.giphy.com/media/ULHclikJ78DZe/giphy.gif" width="650" height="500" />
+</section>
+<section class="slide" id="slide-16">
+	<h2>I'm no expert on these</h2>
+	<h3>Let's be fair I'm barely an expert on anything</h3>
+	<img src="https://media.giphy.com/media/VXCPgZwEP7f1e/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-17">
+	<h2>State</h2>
+	<ol>
+		<li>
+			<h4>It's really hard to pull apart modules when they rely on shared state</h4>
+		</li>
+		<li>
+			<h4>All functional programmers in the audience now is your cue to start smuggly nodding at each other</h4>
+		</li>
+		<li>
+			<h4>If your tests aren't robust then it's really bad</h4>
+		</li>
+		<li>
+			<h4>Try using a few ramda functions</h4>
+		</li>
+		<li>
+			<h4>Debugging a compose is way easier than debugging a list of functions</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-18">
+	<h2>Example: Debugging compose</h2>
+			<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-19">
+	<h2>Too many modules</h2>
+	<ol>
+		<li>
+			<h4>We have a bug in one of our low level modules that's showing itself in a high level module</h4>
+		</li>
+		<li>
+			<h4>npm publish npm publish npm publish npm publish npm publish</h4>
+		</li>
+		<li>
+			<h4>Forgot something, need to redo</h4>
+		</li>
+		<li>
+			<h4>Modules become massive trees</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-20">
+	<h2>Solution: Massively Decouple</h2>
+	<h3>Turn your collection of modules into several self reliant modules</h3>
+	<img src="https://media.giphy.com/media/EBPwmwJKlhrKE/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-21">
+	<h2>Whiteboard Example: Fanout/CQRS/People keep renaming this pattern</h2>
+			<img src="https://media.giphy.com/media/qlYE3ZuE9yVeU/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-22">
+	<h1>Things I still haven't seen the need for</h1>
+	<img src="https://media.giphy.com/media/Nc8io7d6xinO8/giphy.gif" width="650" height="500" />
+</section>
+
+<section class="slide" id="slide-23">
+	<h2>AWS lamda</h2>
+	<ol>
+		<li>
+			<h4>It's a great pattern</h4>
+		</li>
+		<li>
+			<h4>Lamdas are too small, difficult to compose a large codebase in them</h4>
+		</li>
+		<li>
+			<h4>How do you logically separate lamdas?</h4>
+		</li>
+		<li>
+			<h4>No seriously, if you know please tell me.</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-24">
+	<h2>Clojurescript</h2>
+	<ol>
+		<li>
+			<h4>It's a great language</h4>
+		</li>
+		<li>
+			<h4>No one knows clojure</h4>
+		</li>
+		<li>
+			<h4>No clojurescript devs have been able to tell me how you interact with a database</h4>
+		</li>
+		<li>
+			<h4>No seriously, if you know please tell me.</h4>
+		</li>
+	</ol>
+</section>
+
+<section class="slide" id="slide-25">
+	<h1>Questions, comments</h1>
+		<img src="https://media.giphy.com/media/v6bWA3jIqyamQ/giphy.gif" width="650" height="500" />
+
+</section>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.2.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+<!-- controldeck.js -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/controldeck-slides.js"></script>
+
+</body>
+</html>
